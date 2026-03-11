@@ -5,10 +5,8 @@ import java.util.*;
 
 public class Main {
     static List<parca> parcalistesi = new ArrayList<>();
-    static int[][] map = new int[3][15];
+    static int[][] map = new int[3][10005];
 //3 sutun var ama       satır sayısı parca sayısı kadar olmalı onu henüz ayarlamadım parca sayısını 15 den küçük giriyorum şuan kullanırken
-
-
 
 
     public static void main(String[] args) {
@@ -93,12 +91,12 @@ public class Main {
             }
 
 
-          //  mapDene(parcalistesi.size());
-          //  cw(5);
+            //  mapDene(parcalistesi.size());
+            //  cw(5);
             map[gidecekyer][0] = placetekienkucuk;
             map[oynanacakplace][parcalistesi.size() - placetekiitemsayisi] = 0;
             sirala(map);
-         //   mapDene(parcalistesi.size());
+            //   mapDene(parcalistesi.size());
 
 
         }
@@ -236,12 +234,13 @@ public class Main {
                 //********************************************
 
                 int bosluk = parcasayisi - map[sutun][satir];
+                bosluk=bosluk*2;
                 int teksayi = 0;
                 double boslukbol2 = bosluk / 2;
 
                 if ((double) bosluk / 2 != boslukbol2) {
 
-                    teksayi = 1;
+                 //   teksayi = 1;
                 }
 
                 for (int l = bosluk / 2; l > 0; l--) {
@@ -252,11 +251,13 @@ public class Main {
                     System.out.print(" ");
 
                 }
-
+//if(sutun == 0 && satir == parcasayisi-2) {
+//    System.out.print(" ");
+//}
 
                 for (int k = 0; k < map[sutun][satir]; k++) {
 
-                    System.out.print("*");
+                    System.out.print(" *");
                 }
 
 
