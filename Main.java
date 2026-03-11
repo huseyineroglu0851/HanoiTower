@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Main {
     static List<parca> parcalistesi = new ArrayList<>();
-    static int[][] map = new int[3][10005];
+    static int[][] map = new int[3][100];
 //3 sutun var ama       satır sayısı parca sayısı kadar olmalı onu henüz ayarlamadım parca sayısını 15 den küçük giriyorum şuan kullanırken
 
 
